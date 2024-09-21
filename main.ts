@@ -306,6 +306,25 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
             d f f f f f f f f f f f f f f d 
             `, SpriteKind.spike)
         tiles.placeOnTile(mySprite12, tiles.getTileLocation(38, 11))
+        mySprite13 = sprites.create(img`
+            d f f f f f f f f f f f f f f d 
+            . d d f f f f f f f f f f d d . 
+            . . d f f f f f f f f f f d . . 
+            . . . d f f f f f f 1 1 d . . . 
+            . . . . d f f f f f 1 d . . . . 
+            . . . . . d f f f f d . . . . . 
+            . . . . . . d f f d . . . . . . 
+            . . . . . . . d d . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `, SpriteKind.Player)
+        tiles.placeOnTile(mySprite13, tiles.getTileLocation(41, 12))
     }
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.opener, function (sprite, otherSprite) {
@@ -409,6 +428,7 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
         )
     }
 })
+let mySprite13: Sprite = null
 let mySprite12: Sprite = null
 let mySprite11: Sprite = null
 let mySprite10: Sprite = null
